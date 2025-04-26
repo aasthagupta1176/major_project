@@ -1,0 +1,137 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links {
+  text-decoration: none;
+  color: #222222;
+  width: 100%;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info {
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+/* Listing Cards */
+.listing-link {
+  text-decoration: none;
+}
+
+.listing-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;  /* Add vertical space between rows */
+}
+
+.listing-card:hover {
+  transform: scale(1.02);
+}
+
+.card-img-top {
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+}
+
+.card-body {
+  padding: 0 !important;
+  border: none;  /* Ensure no border in the card body */
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* Ensure no border below price */
+.card-body .price {
+  border-bottom: none; /* Remove any border under the price */
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* Optional: Add spacing between the cards in the container */
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;  /* Space between items both horizontally and vertically */
+}
+
+
+/* Buttons */
+.add-btn,
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+.btns {
+  display: flex;
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map */
+#map {
+  height: 400px;
+  width: 80vh;
+}
