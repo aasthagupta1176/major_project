@@ -2,7 +2,9 @@ const Listing = require("../models/listing");
 const { cloudinary } = require("../cloudConfig.js");
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 
-const mapToken = process.env.MAP_TOKEN;
+// Corrected environment variable name
+const mapToken = process.env.MAP_TOKEN; // <-- This matches your .env file
+
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async (req, res) => {
@@ -53,7 +55,7 @@ module.exports.createListing = async (req, res, next) => {
     newListing.image = { url, filename };
     newListing.geometry = response.body.features[0].geometry;
 
-    let savedListing=await newListing.save();
+    let savedListing = await newListing.save();
     console.log(savedListing);
     req.flash("success", "New Listing Created!");
     res.redirect("/listings");
